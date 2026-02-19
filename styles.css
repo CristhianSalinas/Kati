@@ -4,9 +4,10 @@ body {
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  align-items: flex-start; /* antes estaba center */
+  min-height: 100vh; /* en vez de height */
+  overflow-x: hidden; /* solo bloquea horizontal */
+  padding: 20px 0; /* espacio arriba y abajo */
 }
 
 .app {
@@ -89,4 +90,8 @@ body {
 @keyframes floatUp {
   0% {transform: translateY(0) scale(1); opacity: 1;}
   100% {transform: translateY(-150px) scale(1.5); opacity: 0;}
+}
+
+.app {
+  margin-bottom: 40px;
 }
