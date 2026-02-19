@@ -8,20 +8,49 @@
 </head>
 <body>
 
-  <div class="app">
-    <h1>❤️ Nuestro Tiempo ❤️</h1>
+<div class="app">
+  <h1>❤️ Nuestro Tiempo ❤️</h1>
 
-    <div class="card">
-      <h2>Meses juntos</h2>
-      <div id="months" class="counter">0</div>
-    </div>
+  <div class="card">
+    <h2>Meses juntos</h2>
+    <div id="months" class="counter">0</div>
+  </div>
 
-    <div class="card">
-      <h2>Días para el próximo mes</h2>
-      <div id="days" class="counter">0</div>
+  <div class="card">
+    <h2>Días para el próximo mes</h2>
+    <div id="daysLeft" class="counter">0</div>
+  </div>
+
+  <div class="card">
+    <h2>Días en total</h2>
+    <div id="totalDays" class="counter">0</div>
+  </div>
+
+  <button id="surpriseBtn" class="main-btn">💌 Abrir sorpresa</button>
+
+  <div id="letter" class="hidden letter">
+    <p>
+      Gracias por cada momento, cada risa y cada abrazo ❤️  
+      No importa cuánto tiempo pase, siempre quiero seguir contando meses contigo.
+    </p>
+
+    <div class="secret-section">
+      <input type="password" id="secretInput" placeholder="Escribe nuestra fecha (DDMM)">
+      <button id="unlockBtn">Desbloquear</button>
+      <p id="secretMessage" class="hidden">
+        ✨ Eres la mejor decisión que he tomado ✨
+      </p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <button id="musicBtn" class="music-btn">🎵 Activar música</button>
+
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
 </body>
 </html>

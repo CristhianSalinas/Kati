@@ -6,21 +6,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .app {
   background: white;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
   animation: fadeIn 1s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .card {
-  margin: 20px 0;
+  margin: 15px 0;
   padding: 15px;
   border-radius: 15px;
   background: #f9f9f9;
@@ -32,10 +35,42 @@ body {
 }
 
 .counter {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   color: #ff4f81;
-  animation: pulse 1.5s infinite;
+}
+
+.main-btn, .music-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4f81;
+  color: white;
+  cursor: pointer;
+}
+
+.letter {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.secret-section {
+  margin-top: 10px;
+}
+
+.secret-section input {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
 }
 
 @keyframes fadeIn {
@@ -43,8 +78,15 @@ body {
   to {opacity: 1; transform: translateY(0);}
 }
 
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.1);}
-  100% {transform: scale(1);}
+/* Corazones */
+.heart {
+  position: fixed;
+  color: #ff4f81;
+  animation: floatUp 2s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {transform: translateY(0) scale(1); opacity: 1;}
+  100% {transform: translateY(-150px) scale(1.5); opacity: 0;}
 }
